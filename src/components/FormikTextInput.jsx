@@ -8,13 +8,15 @@ import Text from "./Text";
 const styles = StyleSheet.create({
   errorText: {
     marginTop: 5,
+    color: "#d73a4a",
+    marginBottom: 4,
   },
   input: {
     borderWidth: 1,
     borderColor: "gray",
     borderRadius: 4,
-    marginTop: 6,
-    marginBottom: 6,
+    marginTop: 10,
+    marginBottom: 2,
     padding: 6,
   },
 });
