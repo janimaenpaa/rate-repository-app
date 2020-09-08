@@ -1,9 +1,26 @@
 import React from "react";
+import { View } from "react-native";
+import { Formik } from "formik";
 
-import Text from "./Text";
+import SignInForm from "./SignInForm";
+
+const initialValues = {
+  username: "",
+  password: "",
+};
 
 const SignIn = () => {
-  return <Text>The sign in view</Text>;
+  const onSubmit = (values) => {
+    console.log(values);
+  };
+
+  return (
+    <View>
+      <Formik initialValues={initialValues} onSubmit={onSubmit}>
+        {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
+      </Formik>
+    </View>
+  );
 };
 
 export default SignIn;
