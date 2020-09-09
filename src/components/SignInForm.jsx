@@ -1,5 +1,6 @@
 import React from "react";
-import { View, StyleSheet, TouchableWithoutFeedback, Text } from "react-native";
+import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import Text from "./Text";
 
 import FormikTextInput from "./FormikTextInput";
 import theme from "../theme";
