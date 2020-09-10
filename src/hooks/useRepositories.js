@@ -5,12 +5,16 @@ import { GET_REPOSITORIES } from "../graphql/queries";
 import Text from "../components/Text";
 
 const useRepositories = () => {
-  const { loading, data, refetch } = useQuery(GET_REPOSITORIES, {
+  const { loading, error, data, refetch } = useQuery(GET_REPOSITORIES, {
     fetchPolicy: "cache-and-network",
   });
 
   if (loading) {
     return <Text>Loading...</Text>;
+  }
+
+  if (error) {
+    return <Text>Error</Text>;
   }
 
   const repositories = data.repositories;
